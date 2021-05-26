@@ -1,16 +1,12 @@
 package v1
 
-import (
-	"ToDoRestApi/internal/service"
-	"github.com/gin-gonic/gin"
-)
+import "github.com/gin-gonic/gin"
 
 type Handler struct {
-	services *service.Service
 }
 
-func NewHandler(services *service.Service) *Handler {
-	return &Handler{services: services}
+func NewHandler() *Handler {
+	return &Handler{}
 }
 
 func (h *Handler) Init(api *gin.RouterGroup) {
